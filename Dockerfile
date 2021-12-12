@@ -48,7 +48,7 @@ RUN pip install \
     "altair_data_server==0.4.1" \
     "ipykernel==6.5.*" \
     "vega_datasets==0.9.*" \
-    "graphviz==2.49.*" \
+    "graphviz==0.19.*" \
     "altair_saver==0.5.*"
     
     
