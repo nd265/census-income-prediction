@@ -3,8 +3,8 @@
 # December 09, 2021
 
 # Use anaconda as the base image
-# FROM continuumio/anaconda3
-FROM jupyter/base-notebook
+FROM continuumio/anaconda3
+# FROM jupyter/base-notebook
 # Install System Pre-requisites
 RUN apt update && \
     apt install -y software-properties-common build-essential libcurl4-openssl-dev libssl-dev libxml2-dev
