@@ -6,18 +6,18 @@
 FROM continuumio/anaconda3
 
 # Install System Pre-requisites
-RUN apt update && \
-    apt install -y software-properties-common build-essential libcurl4-openssl-dev libssl-dev libxml2-dev
+# RUN apt update && \
+#     apt install -y software-properties-common build-essential libcurl4-openssl-dev libssl-dev libxml2-dev
 
-# Install R (Version 4.1.2)
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key '95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7'
+# # Install R (Version 4.1.2)
+# RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key '95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7'
 
-RUN add-apt-repository "deb http://cloud.r-project.org/bin/linux/debian bullseye-cran40/" && \
-    apt update && \
-    apt install -y -t bullseye-cran40 r-base r-base-dev
+# RUN add-apt-repository "deb http://cloud.r-project.org/bin/linux/debian bullseye-cran40/" && \
+#     apt update && \
+#     apt install -y -t bullseye-cran40 r-base r-base-dev
 
-# Install required packages in R
-RUN Rscript -e "install.packages('tidyverse');"
+# # Install required packages in R
+# RUN Rscript -e "install.packages('tidyverse');"
 
 RUN apt-get install make -y
 # Download the conda environment file and create conda environment
@@ -29,7 +29,7 @@ RUN apt-get install make -y
 # Garbage collection
 #RUN rm /home/census-income.yaml 
 
-RUN conda install --quiet -y -c conda-forge \
+RUN mamba install --quiet -y \
     "ipykernel=6.5.*" \
     "vega_datasets=0.9.*" \
     "graphviz=2.49.*" \
