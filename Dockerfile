@@ -29,7 +29,7 @@ FROM continuumio/miniconda3
 # Garbage collection
 #RUN rm /home/census-income.yaml 
 
-RUN conda install --quiet -yes \
+RUN conda install --quiet -y \
     "ipykernel=6.5.*" \
     "vega_datasets=0.9.*" \
     "graphviz=2.49.*" \
