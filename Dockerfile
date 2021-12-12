@@ -3,7 +3,7 @@
 # December 09, 2021
 
 # Use anaconda as the base image
-FROM continuumio/miniconda3
+FROM continuumio/anaconda3
 
 # Install System Pre-requisites
 # RUN apt update && \
@@ -30,26 +30,31 @@ FROM continuumio/miniconda3
 #RUN rm /home/census-income.yaml 
 
 RUN conda install --quiet -y \
-    "ipykernel=6.5.*" \
-    "vega_datasets=0.9.*" \
-    "graphviz=2.49.*" \
+#     "ipykernel=6.5.*" \
+#     "vega_datasets=0.9.*" \
+#     "graphviz=2.49.*" \
     "requests>=2.24.0" \
-    "imbalanced-learn=0.8.*" \
     "altair=4.1.*" \
-    "altair_saver=0.5.*" \
+#     "altair_saver=0.5.*" \
     "docopt=0.6.*" \
     "matplotlib=3.5.*" \
     "matplotlib-inline=0.1.*" \
     "numpy=1.21.*" \
     "pandas=1.3.*" \
-    "shap>=0.40.0" \
+#     "shap>=0.40.0" \
     "scikit-learn=1.*" \
     "scipy=1.7.*" \
     "pandoc>=1.12.3" \
-    "altair_data_server==0.4.1" \
+#     "altair_data_server==0.4.1" \
 
 RUN pip install \
-    "shap>=0.40.0"
+    "shap>=0.40.0" \
+    "imbalanced-learn=0.8.*" \
+    "altair_data_server==0.4.1" \
+    "ipykernel=6.5.*" \
+    "vega_datasets=0.9.*" \
+    "graphviz=2.49.*" \
+    "altair_saver=0.5.*" \
     
     
     
