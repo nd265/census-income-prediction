@@ -19,7 +19,7 @@ FROM continuumio/anaconda3
 # # Install required packages in R
 # RUN Rscript -e "install.packages('tidyverse');"
 
-RUN apt-get install make -y
+# RUN apt-get install make -y
 # Download the conda environment file and create conda environment
 #RUN cd home && \
 #    wget https://raw.githubusercontent.com/UBC-MDS/census-income-prediction/main/census-income.yaml && \
@@ -47,7 +47,6 @@ RUN mamba install --quiet -y \
     "scipy=1.7.*" \
     "pandoc>=1.12.3" \
     "altair_data_server==0.4.1" \
-    
 
 RUN pip install \
     "shap>=0.40.0"
