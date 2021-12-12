@@ -30,7 +30,6 @@ FROM jupyter/base-notebook
 #RUN rm /home/census-income.yaml 
 
 RUN mamba install --quiet --yes \
-
     "requests>=2.24.0" \
     "altair=4.1.*" \
     "docopt=0.6.*" \
@@ -40,7 +39,7 @@ RUN mamba install --quiet --yes \
     "pandas=1.3.*" \
     "scikit-learn=1.*" \
     "scipy=1.7.*" \
-    "pandoc>=1.12.3" \
+    "pandoc>=1.12.3"
     
 
 RUN pip install \
@@ -50,7 +49,7 @@ RUN pip install \
     "ipykernel=6.5.*" \
     "vega_datasets=0.9.*" \
     "graphviz=2.49.*" \
-    "altair_saver=0.5.*" \
+    "altair_saver=0.5.*"
     
     
     
