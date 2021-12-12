@@ -29,7 +29,7 @@ FROM jupyter/base-notebook
 # Garbage collection
 #RUN rm /home/census-income.yaml 
 
-RUN mamba install --quiet -yes \
+RUN mamba install --quiet --yes \
 
     "requests>=2.24.0" \
     "altair=4.1.*" \
