@@ -3,7 +3,7 @@
 # December 09, 2021
 
 # Use anaconda as the base image
-FROM continuumio/anaconda3
+FROM continuumio/miniconda3
 
 # Install System Pre-requisites
 # RUN apt update && \
@@ -29,7 +29,7 @@ FROM continuumio/anaconda3
 # Garbage collection
 #RUN rm /home/census-income.yaml 
 
-RUN mamba install --quiet -y \
+RUN conda install --quiet -yes \
     "ipykernel=6.5.*" \
     "vega_datasets=0.9.*" \
     "graphviz=2.49.*" \
