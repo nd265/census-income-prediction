@@ -44,12 +44,12 @@ RUN mamba install --quiet --yes \
 
 RUN pip install \
     "shap>=0.40.0" \
-    "imbalanced-learn=0.8.*" \
+    "imbalanced-learn==0.8.*" \
     "altair_data_server==0.4.1" \
-    "ipykernel=6.5.*" \
-    "vega_datasets=0.9.*" \
-    "graphviz=2.49.*" \
-    "altair_saver=0.5.*"
+    "ipykernel==6.5.*" \
+    "vega_datasets==0.9.*" \
+    "graphviz==2.49.*" \
+    "altair_saver==0.5.*"
     
     
     
