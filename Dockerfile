@@ -6,8 +6,8 @@
 # FROM continuumio/anaconda3
 FROM jupyter/base-notebook
 # Install System Pre-requisites
-RUN apt update && \
-    apt install -y software-properties-common build-essential libcurl4-openssl-dev libssl-dev libxml2-dev
+
+RUN apt update && apt install -y software-properties-common build-essential libcurl4-openssl-dev libssl-dev libxml2-dev
 
 # # Install R (Version 4.1.2)
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key '95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7'
@@ -29,7 +29,7 @@ RUN apt-get install make -y
 # Garbage collection
 # RUN rm /home/census-income.yaml 
 
-RUN mamba install --quiet --yes \
+RUN conda install --quiet -y -c conda-forge \
     "requests>=2.24.0" \
     "altair=4.1.*" \
     "docopt=0.6.*" \
