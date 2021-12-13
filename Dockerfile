@@ -3,8 +3,8 @@
 # December 09, 2021
 
 # Use anaconda as the base image
-FROM continuumio/anaconda3
-# FROM jupyter/base-notebook
+# FROM continuumio/anaconda3
+FROM jupyter/base-notebook
 # Install System Pre-requisites
 RUN apt update && \
     apt install -y software-properties-common build-essential libcurl4-openssl-dev libssl-dev libxml2-dev
@@ -39,10 +39,7 @@ RUN mamba install --quiet --yes \
     "pandas=1.3.*" \
     "scikit-learn=1.*" \
     "scipy=1.7.*" \
-    "pandoc>=1.12.3"
-    
-
-RUN pip install \
+    "pandoc>=1.12.3" \
     "shap>=0.40.0" \
     "imbalanced-learn==0.8.*" \
     "altair_data_server==0.4.1" \
@@ -50,6 +47,10 @@ RUN pip install \
     "vega_datasets==0.9.*" \
     "graphviz==0.19.*" \
     "altair_saver==0.5.*"
+    
+
+# RUN pip install \
+    
     
     
     
